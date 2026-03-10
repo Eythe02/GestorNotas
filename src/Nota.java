@@ -24,4 +24,11 @@ public class Nota {
     public void setContenido(String c){
         contenido = c;
     }
+
+    
+    @Override
+    public String toString() {
+       return titulo;
+   }
+
 }
