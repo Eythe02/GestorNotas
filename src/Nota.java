@@ -17,4 +17,11 @@ public class Nota {
         return contenido;
     }
 
+    public void setTitulo(String t){
+        titulo = t;
+    }
+
+    public void setContenido(String c){
+        contenido = c;
+    }
 }
