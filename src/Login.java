@@ -33,6 +33,20 @@ public class Login extends JFrame {
         JButton registro = new JButton("Registro");
         registro.setBounds(190,100,80,30);
         add(registro);
+
+        login.addActionListener(e -> {
+            String user = usuarioField.getText();
+            String pass = new String(passField.getPassword());
+            String hash = HashUtil.hash(pass);
+            if(ArchivoUtil.comprobarUsuario(user, hash)){
+                new GestorNotas(user);
+                dispose();
+            } else {
+                JOptionPane.showMessageDialog(null,"Credenciales incorrectas");
+            }
+});
+
+registro.addActionListener(e -> new Registro());
         
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setVisible(true);
