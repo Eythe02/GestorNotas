@@ -26,6 +26,14 @@ public class Login extends JFrame {
         passField.setBounds(100,60,150,20);
         add(passField);
 
+        JButton login = new JButton("Login");
+        login.setBounds(100,100,80,30);
+        add(login);
+
+        JButton registro = new JButton("Registro");
+        registro.setBounds(190,100,80,30);
+        add(registro);
+        
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setVisible(true);
     }
