@@ -8,4 +8,13 @@ public class Nota {
         this.titulo = titulo;
         this.contenido = contenido;
     }
+
+    public String getTitulo(){
+        return titulo;
+    }
+
+    public String getContenido(){
+        return contenido;
+    }
+
 }
