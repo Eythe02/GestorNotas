@@ -32,4 +32,18 @@ public static boolean comprobarUsuario(String usuario, String hash){
 
     return false;
 }
+
+public static void guardarNotas(String usuario, ArrayList<Nota> notas){
+
+    try {
+        FileWriter fw = new FileWriter(usuario + "_notas.txt");
+
+        for(Nota n : notas){
+            
+            fw.write(n.getTitulo() + "|" + n.getContenido());
+        }
+
+        fw.close();
+    } catch (Exception e) {}
+}
 }
