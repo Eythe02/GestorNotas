@@ -50,6 +50,41 @@ public class GestorNotas extends JFrame {
         add(tituloField, BorderLayout.NORTH);
         add(new JScrollPane(contenidoArea), BorderLayout.CENTER);
         add(new JScrollPane(lista), BorderLayout.WEST);
+        lista.addListSelectionListener(e -> {
+    Nota n = lista.getSelectedValue();
+    if(n != null){
+        tituloField.setText(n.getTitulo());
+        contenidoArea.setText(n.getContenido());
+    }
+});
+
+        crear.addActionListener(e -> {
+            Nota n = new Nota(tituloField.getText(), contenidoArea.getText());
+            notas.add(n);
+            modelo.addElement(n);
+        });
+
+        editar.addActionListener(e -> {
+            Nota n = lista.getSelectedValue();
+            if(n != null){
+                n.setTitulo(tituloField.getText());
+                n.setContenido(contenidoArea.getText());
+                lista.repaint();
+            }
+        });
+
+        eliminar.addActionListener(e -> {
+            Nota n = lista.getSelectedValue();
+            if(n != null){
+                notas.remove(n);
+                modelo.removeElement(n);
+            }
+        });
+
+        guardar.addActionListener(e -> {
+            ArchivoUtil.guardarNotas(usuario, notas);
+            JOptionPane.showMessageDialog(null,"Notas guardadas");
+        });
 
         setVisible(true);
     }
