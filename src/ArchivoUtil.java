@@ -41,7 +41,7 @@ public static void guardarNotas(String usuario, ArrayList<Nota> notas){
 
         for(Nota n : notas){
             
-            fw.write(n.getTitulo() + "|" + n.getContenido());
+            fw.write(n.getTitulo() + "|" + n.getContenido() + "\n");
         }
 
         fw.close();
