@@ -18,7 +18,7 @@ public class HashUtil {
 
            return sb.toString();
 
-       } catch (Exception e) {
+        } catch (Exception e) {
            return null;
        }
    }
