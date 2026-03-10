@@ -1,7 +1,7 @@
 
-import javax.swing.*;
 import java.awt.*;
 import java.util.ArrayList;
+import javax.swing.*;
 
 public class GestorNotas extends JFrame {
 
@@ -34,7 +34,19 @@ public class GestorNotas extends JFrame {
         for (Nota n : notas) {
             modelo.addElement(n);
         }
+        JButton crear = new JButton("Crear");
+        JButton editar = new JButton("Editar");
+        JButton eliminar = new JButton("Eliminar");
+        JButton guardar = new JButton("Guardar");
 
+        JPanel panel = new JPanel();
+
+        panel.add(crear);
+        panel.add(editar);
+        panel.add(eliminar);
+        panel.add(guardar);
+
+        add(panel, BorderLayout.SOUTH);
         add(tituloField, BorderLayout.NORTH);
         add(new JScrollPane(contenidoArea), BorderLayout.CENTER);
         add(new JScrollPane(lista), BorderLayout.WEST);
