@@ -33,18 +33,18 @@ public class Registro extends JFrame {
 
        registrar.addActionListener(e -> {
 
-           String user = usuario.getText();
-           String pass = new String(pass.getPassword());
+        String user = usuario.getText();
+        String password = new String(pass.getPassword());
 
-           String hash = HashUtil.hash(pass);
+        String hash = HashUtil.hash(password);
 
-           ArchivoUtil.guardarUsuario(user, hash);
+        ArchivoUtil.guardarUsuario(user, hash);
 
-           JOptionPane.showMessageDialog(null,"Usuario registrado");
+        JOptionPane.showMessageDialog(null,"Usuario registrado");
 
-           dispose();
+        dispose();
 
-       });
+});
 
        setVisible(true);
    }
