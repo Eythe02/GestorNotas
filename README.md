@@ -30,4 +30,4 @@ Gustavo Aythami Mayor Sánchez
 
 ## Anotación
 
-Al disponer de poco tiempo y no acabar de entender el tema usé IA varias veces tanto en esta como en la primera práctica tratando de hacer yo mismo lo máximo posible y tratando de entender lo que estaba realizando.
+Al disponer de poco tiempo y no acabar de entender el tema usé IA varias veces tratando de hacer yo mismo lo máximo posible y tratando de entender lo que estaba realizando.
